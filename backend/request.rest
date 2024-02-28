@@ -1,0 +1,88 @@
+//ENDPOINT BUSINESS
+
+// get all
+GET http://localhost:5001/business/search
+
+// get by search
+###
+GET http://localhost:5001/business/search?name=lain&price=$$$&categories=minuman&limit=2
+
+// post business
+###
+POST http://localhost:5001/business
+Content-Type: application/json
+
+{
+    "id_categories": 8,
+    "alias": "untuk",
+    "name": "untuk",
+    "is_closed": true,
+    "url": "https://www.yelp.com/biz/eleven-madison-park-new-york?adjust_creative=DSj6I8qbyHf-Zm2fGExuug&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=DSj6I8qbyHf-Zm2fGExuug",
+    "rating": 4.3,
+    "review_count": 4252,
+    "coordinates": "uuuu",
+    "transactions": "tess",
+    "price": "$$$$",
+    "location": "tess",
+    "phone": "+6273837363737",
+    "display_phone": "(1817) 37373 772",
+    "distance": 7262.282626
+}
+
+// update business
+###
+PATCH http://localhost:5001/business/1
+Content-Type: application/json
+
+{
+    "id_categories": 4,
+    "alias": "waktu",
+    "name": "waktu",
+    "is_closed": true,
+    "url": "https://www.yelp.com/biz/eleven-madison-park-new-york?adjust_creative=DSj6I8qbyHf-Zm2fGExuug&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=DSj6I8qbyHf-Zm2fGExuug",
+    "rating": 4.3,
+    "review_count": 4252,
+    "coordinates": "uuuu",
+    "transactions": "tess",
+    "price": "$$$$",
+    "location": "tess",
+    "phone": "+6273837363737",
+    "display_phone": "(1817) 37373 772",
+    "distance": 7262.282626
+}
+
+// Delete Business
+###
+DELETE  http://localhost:5001/business/1
+
+
+// CATEGORIES
+
+// get all 
+###
+GET http://localhost:5001/categories
+
+// post
+###
+POST http://localhost:5001/categories
+Content-Type: application/json
+
+{
+    "alias": "untuk",
+    "title": "untuk"
+}
+
+// Update
+###
+PATCH http://localhost:5001/categories/2
+Content-Type: application/json
+
+{
+    "alias": "untuk",
+    "title": "untuk"
+}
+
+// Delete
+###
+DELETE  http://localhost:5001/categories/3
+
